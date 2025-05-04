@@ -6,17 +6,11 @@ This project is created as part of a Final Year Project submission.
 
 ---
 
-## IMPORTANT ## 
-As my source code folder is too big to be submmited in one folder I have seperated to three folder. 
-Step 1: Download all three foldler and unzip it 
-Step 2: Copy and paster all the content in folder "Images2" into folder "Images" 
-Step 3: Drag the **WHOLE** folder of "Images" in the "Images" folder to folder "finalyearproject 20416044 -> "src".
-
 ## 📁 Folder Contents
 
 After extracting the `.zip`, you should see the following structure:
 
-finalyearproject/
+homestay-booking-platform-main/
 ├── public/
 ├── src/
 ├── .gitignore
@@ -44,7 +38,7 @@ npm -v
 
 ### ✅ 2. Open the Project in Terminal
 Open your terminal or command prompt and navigate into the extracted project folder:
-cd path/to/finalyearproject
+cd path/to/homestay-booking-platform-main
 
 ### ✅ 3. Install Dependencies
 Install all necessary packages using:
