@@ -1,0 +1,291 @@
+/* === Import Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* === Base Layout === */
+body, .homepage-container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* === Introduction Section === */
+.introduction {
+  background-color: #f8f9fa;
+  min-height: 55vh;
+}
+
+.introduction h1 {
+  font-size: 80px;
+  color: rgba(31, 62, 144, 255);
+  font-family: "Poppins";
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.introduction h2 {
+  font-size: 20px;
+}
+
+/* === Services Section === */
+@keyframes floatingOut {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  animation: floatingOut 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.service {
+  width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.service:hover img {
+  transform: scale(1.05);
+}
+
+.service h3 {
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.service:hover h3 {
+  color: rgba(31, 62, 144, 255);
+}
+
+.service p {
+  margin-top: 20px;
+  font-size: 19px;
+}
+
+/* Responsive Services */
+@media (max-width: 1024px) {
+  .service { width: 300px; }
+}
+@media (max-width: 768px) {
+  .service { width: 100%; }
+}
+
+/* === Brands Section === */
+.brands h2 {
+  font-size: 50px;
+  color: rgba(31, 62, 144, 255);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.brand-logos {
+  overflow: hidden;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.logo-slider {
+  display: flex;
+  gap: 30px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.logo-slider img {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-slider img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); } /* Adjust based on how many times you repeat */
+}
+
+@media (max-width: 768px) {
+  .logo-slider img {
+    width: 160px;
+    height: 80px;
+  }
+}
+
+/* === Our Work Section === */
+.our-work {
+  background-color: #f9f9f9;
+  padding: 50px;
+}
+
+.our-work h2 {
+  font-size: 50px;
+  color: rgba(31, 62, 144, 255);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.our-work p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 10px;
+  color: #555;
+}
+
+/* Carousell Section */
+.ourwork-swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.ourwork-slide {
+  position: relative;
+  background: #000;
+  width: 400px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ourwork-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ourwork-slide .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  text-align: left;
+}
+
+.ourwork-slide .overlay h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* End of Carousell */ 
+
+
+.view-portfolio {
+  margin-top: 20px;
+}
+
+.portfolio-button {
+  padding: 12px 24px;
+  border: 2px solid #007bff;
+  background: none;
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* === FAQ Section === */
+.faq h2 {
+  font-size: 40px;
+  color: rgba(31, 62, 144, 255);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.faq p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 10px;
+}
+
+.faq-item {
+  padding: 15px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: rgba(31, 62, 144, 255);
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.faq-answer {
+  font-size: 18px;
+  color: #555;
+  padding: 0 10px;
+  text-align: left;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s, padding 0.3s;
+}
+
+.faq-item.open .faq-answer {
+  padding: 5px 10px;
+}
+
+

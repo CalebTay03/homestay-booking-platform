@@ -1,0 +1,266 @@
+/* === General Layout === */
+.query-container {
+  display: flex;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 250px;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 5px 0 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* === Building Options === */
+.building-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 20px;
+}
+
+.building-option {
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.building-option:hover {
+  background-color: #e0e0e0;
+}
+
+.building-option.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+/* === Price Range Slider === */
+.price-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.price-values {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+}
+
+.range-slider {
+  height: 6px;
+  background-color: transparent;
+  margin: 10px 0;
+  position: relative;
+}
+
+.slider-thumb {
+  height: 16px;
+  width: 16px;
+  background-color: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  top: -5px;
+  position: relative;
+  box-shadow: 0 0 0 2px white;
+}
+
+/* === Buttons === */
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:first-of-type {
+  background-color: #007bff;
+  color: white;
+  margin-top: 10px;
+}
+
+.sidebar button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+.sidebar button:last-of-type {
+  background-color: #f0f0f0;
+  color: #333;
+  margin-top: 10px;
+}
+
+.sidebar button:last-of-type:hover {
+  background-color: #e0e0e0;
+}
+
+/* === Swiper (Image Carousel) === */
+.swiper-container-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.unit-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide arrows by default */
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show arrows on image hover */
+.swiper-container-wrapper:hover .swiper-button-prev,
+.swiper-container-wrapper:hover .swiper-button-next {
+  opacity: 1;
+}
+
+/* Airbnb-style arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: white;
+  color: black;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Swiper pagination dots */
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+/* === Unit Header Info === */
+.unit-header {
+  flex: 1;
+}
+
+.unit-header h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.unit-info-box {
+  display: flex;
+  gap: 20px;
+  background-color: #f8f9fa;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  min-width: 160px;
+}
+
+/* === Unit Details === */
+.unit-details {
+  padding-top: 12px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.unit-details p {
+  margin: 4px 0;
+}
+
+/* === Scroll to Top Button === */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bff;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Fade in when active */
+.scroll-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hover effect */
+.scroll-to-top:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.9);
+  color: #0056b3;
+}

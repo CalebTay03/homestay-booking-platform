@@ -1,0 +1,142 @@
+/* === Full Page Wrapper === */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px); /* Adjust 80px to match your actual navbar height */
+}
+
+/* === Header Section === */
+.about-header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background-color: #e9ecef;
+}
+
+.about-header h1 {
+  font-size: 60px;
+  color: rgba(31, 62, 144, 255);
+  font-family: "Poppins";
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* === Our Story Section (Flexible Height) === */
+.our-story {
+  flex-grow: 1;
+  padding: 120px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.our-story h2 {
+  font-size: 50px;
+  color: rgba(31, 62, 144, 255);
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+.our-story p {
+  font-size: 25px;
+  font-family: "Montserrat";
+  margin: 10px 0;
+  color: #555;
+}
+
+/* === Vision & Mission Section === */
+.vision-mission {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  font-family: "Montserrat";
+}
+
+.vision-mission h2 {
+  font-size: 45px;
+  color: rgba(31, 62, 144, 255);
+  font-family: "Poppins";
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.vision-mission p {
+  font-size: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+  text-align: left;
+}
+
+/* === Meet the Team Section === */
+.meet-team {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.meet-team h2 {
+  font-size: 45px;
+  color: rgba(31, 62, 144, 255);
+  font-family: "Poppins";
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+/* Tree structure */
+.team-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.tree-node {
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.tree-node img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tree-node h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #1f3e90;
+  font-family: "Poppins";
+}
+
+.tree-node p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Subordinates Row */
+.tree-branches {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Connector line */
+.tree-branches::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
+

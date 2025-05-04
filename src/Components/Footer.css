@@ -1,0 +1,84 @@
+.contact {
+  background: linear-gradient(to right, #f8f9fa, #f1f3f5);
+  padding: 50px 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ddd;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0; /* ensure no padding inside container */
+}
+
+.contact-text {
+  flex: 1 1 60%;
+  text-align: left;
+}
+
+.contact-text h2 {
+  font-size: 26px;
+  color: rgba(31, 62, 144, 255);
+  font-family: "Poppins";
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 10px; /* tighter control */
+}
+
+
+.contact-text p {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #fff ;
+  color: #007bff ;
+  border: 2px solid #007bff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  background-color: #007bff !important;
+  color: #fff !important;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-text, .contact-button {
+    width: 100%;
+  }
+
+  .contact-btn {
+    margin-top: 15px;
+    width: fit-content;
+  }
+}
